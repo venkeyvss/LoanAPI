@@ -29,30 +29,31 @@
 
       <div class="mb-3">
         <label for="customerName" class="form-label">Customer Name</label>
-        <input type="text" id="customerName" name="CustomerName" class="form-control" placeholder="Enter Customer Name">
+        <input type="text" id="customerName" name="CustomerName" class="form-control" 
+               placeholder="Enter Customer Name" 
+               oninput="this.value = this.value.toUpperCase();">
         <div class="invalid-feedback">Please enter your name.</div>
       </div>
 
       <div class="mb-3">
-  <label for="aadharNumber" class="form-label">Aadhar Number</label>
-  <input type="text" id="aadharNumber" name="AadharNumber" class="form-control" 
-         placeholder="Enter Aadhar Number" 
-         pattern="\d{12}" 
-         title="Aadhar number must be 12 digits."
-         oninput="this.value = this.value.replace(/\D/g, '').slice(0, 12);">
-  <div class="invalid-feedback">Please enter a valid 12-digit Aadhar number.</div>
-</div>
-
+        <label for="aadharNumber" class="form-label">Aadhar Number</label>
+        <input type="text" id="aadharNumber" name="AadharNumber" class="form-control" 
+               placeholder="Enter Aadhar Number" 
+               pattern="\d{12}" 
+               title="Aadhar number must be 12 digits."
+               oninput="this.value = this.value.replace(/\D/g, '').slice(0, 12);">
+        <div class="invalid-feedback">Please enter a valid 12-digit Aadhar number.</div>
+      </div>
 
       <div class="mb-3">
-  <label for="panNumber" class="form-label">PAN Number</label>
-  <input type="text" id="panNumber" name="PanNumber" class="form-control"
-         placeholder="Enter PAN Number"
-         pattern="[A-Z]{5}[0-9]{4}[A-Z]"
-         title="PAN number must be in the format ABCDE1234F."
-         oninput="this.value = this.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 10);">
-  <div class="invalid-feedback">Please enter a valid PAN number in the format ABCDE1234F.</div>
-</div>
+        <label for="panNumber" class="form-label">PAN Number</label>
+        <input type="text" id="panNumber" name="PanNumber" class="form-control" 
+               placeholder="Enter PAN Number" 
+               pattern="[A-Z]{5}[0-9]{4}[A-Z]" 
+               title="PAN number must be in the format ABCDE1234F."
+               oninput="this.value = this.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 10);">
+        <div class="invalid-feedback">Please enter a valid PAN number in the format ABCDE1234F.</div>
+      </div>
 
       <div class="mb-3">
         <label for="dob" class="form-label">Date of Birth</label>
@@ -62,13 +63,17 @@
 
       <div class="mb-3">
         <label for="location" class="form-label">Location</label>
-        <input type="text" id="location" name="Location" class="form-control" placeholder="Enter Location">
+        <input type="text" id="location" name="Location" class="form-control" 
+               placeholder="Enter Location" 
+               oninput="this.value = this.value.toUpperCase();">
         <div class="invalid-feedback">Please enter your location.</div>
       </div>
 
       <div class="mb-3">
         <label for="occupation" class="form-label">Occupation</label>
-        <input type="text" id="occupation" name="Occupation" class="form-control" placeholder="Enter Occupation">
+        <input type="text" id="occupation" name="Occupation" class="form-control" 
+               placeholder="Enter Occupation" 
+               oninput="this.value = this.value.toUpperCase();">
         <div class="invalid-feedback">Please enter your occupation.</div>
       </div>
 
