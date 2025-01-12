@@ -21,9 +21,13 @@
   <div class="container mt-5">
     <h1 class="text-center text-primary mb-4">Loan Application Form</h1>
     <form id="loanForm" class="bg-white p-4 rounded shadow" method="post" autocomplete="on">
-      <div class="mb-3">
+       <div class="mb-3">
         <label for="mobileNumber" class="form-label">Mobile Number</label>
-        <input type="text" id="mobileNumber" name="MobileNumber" class="form-control" placeholder="Enter Mobile Number">
+        <input type="" id="mobileNumber" name="MobileNumber" class="form-control" 
+           pattern="\d{10}" 
+           title="Aadhar number must be 12 digits."
+           oninput="this.value = this.value.replace(/\D/g, '').slice(0, 12);"
+           placeholder="Enter Mobile Number">
         <div class="invalid-feedback">Please enter a valid mobile number.</div>
       </div>
 
