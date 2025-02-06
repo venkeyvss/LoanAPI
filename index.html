@@ -138,244 +138,305 @@
 <div class="owner"> Designed by @Venkatesh</div>
     <script>
         const formStore = {
-            loanForm: {
-                title: "Loan Application Form",
-                formType: "loanForm",
-                fields: [
-                    { 
-                        type: "text", 
-                        name: "Customer_Name", 
-                        placeholder: "Enter customer name", 
-                        label: "Customer Name", 
-                        required: true,
-                        pattern: "^[A-Za-z ]+$",
-                        error: "Only letters and spaces allowed"
-                    },
-                    { 
-                        type: "text", 
-                        name: "Aadhar_Number", 
-                        placeholder: "Ex: 1234 5678 9012", 
-                        label: "Aadhar Number", 
-                        required: true,
-                        error: "Must be 12 digits",
-                        inputmode: "numeric"
-                    },
-                    { 
-                        type: "text", 
-                        name: "PAN_Number", 
-                        placeholder: "Enter PAN Number", 
-                        label: "PAN Number", 
-                        required: true,
-                        pattern: "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
-                        error: "Invalid PAN format (e.g., ABCDE1234F)"
-                    },
-                    { 
-                        type: "text", 
-                        name: "Mobile_Number", 
-                        placeholder: "Enter Mobile Number", 
-                        label: "Mobile Number", 
-                        required: true,
-                        pattern: "^\\d{10}$",
-                        error: "Must be 10 digits",
-                        inputmode: "numeric",
-                        maxlength: 10
-                    },
-                    { 
-                        type: "date", 
-                        name: "DOB", 
-                        placeholder: "Enter DOB", 
-                        label: "Date Of Birth", 
-                        required: true 
-                    },
-                    { 
-                        type: "text", 
-                        name: "Location", 
-                        placeholder: "Enter Location", 
-                        label: "Location", 
-                        required: true 
-                    },
-                    {
-                        type: "select",
-                        name: "Loan_Type",
-                        label: "Loan Type",
-                        options: [
-                            { value: "", text: "Select Loan Type", disabled: true, selected: true },
-                            { value: "PERSONAL LOAN", text: "PERSONAL LOAN" },
-                            { value: "BUSINESS LOAN", text: "BUSINESS LOAN" },
-                            { value: "HOME LOAN", text: "HOME LOAN" },
-                        ],
-                        required: true,
-                    },
-                    { 
-                        type: "number", 
-                        name: "Loan_Amount", 
-                        placeholder: "Enter Loan Amount", 
-                        label: "Loan Amount", 
-                        required: true 
-                    },
-                    { 
-                        type: "date", 
-                        name: "Date", 
-                        label: "Date", 
-                        required: true 
-                    },
-                    { type: "submit", name: "sub" },
-                ],
+    loanForm: {
+        title: "Loan Application Form",
+        formType: "loanForm",
+        fields: [
+            { 
+                type: "text", 
+                name: "CUSTOMER_NAME", 
+                placeholder: "Enter customer name", 
+                label: "Customer Name", 
+                required: true,
+                pattern: "^[A-Za-z ]+$",
+                error: "Only letters and spaces allowed"
             },
-            msmeForm: {
-                title: "MSME License Application",
-                formType: "msmeForm",
-                fields: [
-                    { 
-                        type: "text", 
-                        name: "Applicant_Name", 
-                        placeholder: "Enter applicant name", 
-                        label: "Applicant Name", 
-                        required: true,
-                        pattern: "^[A-Za-z ]+$",
-                        error: "Only letters and spaces allowed"
-                    },
-                    { 
-                        type: "text", 
-                        name: "Enterprise", 
-                        placeholder: "Enter enterprise name", 
-                        label: "Enterprise Name", 
-                        required: true 
-                    },
-                    { 
-                        type: "number", 
-                        name: "Years_of_Business", 
-                        placeholder: "Enter years of business", 
-                        label: "Years of Business", 
-                        required: true 
-                    },
-                    { 
-                        type: "text", 
-                        name: "Aadhar_Number", 
-                        placeholder: "Ex: 1234 5678 9012", 
-                        label: "Aadhar Number", 
-                        required: true,
-                        error: "Must be 12 digits",
-                        inputmode: "numeric"
-                    },
-                    { 
-                        type: "text", 
-                        name: "PAN_Number", 
-                        placeholder: "Enter PAN Number", 
-                        label: "PAN Number", 
-                        required: true,
-                        pattern: "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
-                        error: "Invalid PAN format (e.g., ABCDE1234F)"
-                    },
-                    { 
-                        type: "number", 
-                        name: "Account_Number", 
-                        placeholder: "Enter Account Number", 
-                        label: "Account Number", 
-                        required: true 
-                    },
-                    { 
-                        type: "text", 
-                        name: "IFSC_Code", 
-                        placeholder: "Enter IFSC Code", 
-                        label: "IFSC Code", 
-                        required: true 
-                    },
-                    { 
-                        type: "email", 
-                        name: "Email", 
-                        placeholder: "Enter Email Address", 
-                        label: "Email Address", 
-                        required: true 
-                    },
-                    { 
-                        type: "text", 
-                        name: "Mobile_Number_Linked_With_Aadhar", 
-                        placeholder: "Enter Mobile Number", 
-                        label: "Mobile Number Linked With Aadhar", 
-                        required: true,
-                        pattern: "^\\d{10}$",
-                        error: "Must be 10 digits",
-                        inputmode: "numeric",
-                        maxlength: 10
-                    },
-                    { 
-                        type: "date", 
-                        name: "Date", 
-                        label: "Date", 
-                        required: true 
-                    },
-                    { type: "submit", name: "sub" },
-                ],
+            { 
+                type: "text", 
+                name: "AADHAR_NUMBER", 
+                placeholder: "Ex: 1234 5678 9012", 
+                label: "Aadhar Number", 
+                required: true,
+                error: "Must be 12 digits",
+                inputmode: "numeric"
             },
-            enquiriesForm: {
-                title: "Enquiries Form",
-                formType: "enquiriesForm",
-                fields: [
-                    {
-                        type: "select",
-                        name: "Enquiry_Type",
-                        label: "Enquiry Type",
-                        options: [
-                            { value: "", text: "Select an option", disabled: true, selected: true },
-                            { value: "LOAN", text: "LOAN" },
-                            { value: "MSME", text: "MSME" },
-                            { value: "PROPERTY", text: "Property Sale/Buy" },
-		            { value: "LAND SURVEY", text: "LAND SURVEY" },
-                        ],
-                        required: true,
-                    },
-                    { 
-                        type: "text", 
-                        name: "Mobile_Number", 
-                        placeholder: "Enter Mobile Number", 
-                        label: "Mobile Number", 
-                        required: true,
-                        pattern: "^\\d{10}$",
-                        error: "Must be 10 digits",
-                        inputmode: "numeric",
-                        maxlength: 10
-                    },
-                    { 
-                        type: "text", 
-                        name: "Location", 
-                        placeholder: "Enter Location", 
-                        label: "Location", 
-                        required: true 
-                    },
-                    { 
-                        type: "text", 
-                        name: "Occupation", 
-                        placeholder: "Enter Occupation", 
-                        label: "Occupation", 
-                        required: true 
-                    },
-                    { 
-                        type: "text", 
-                        name: "Customer_Name", 
-                        placeholder: "Enter customer name", 
-                        label: "Customer Name", 
-                        required: true,
-                        pattern: "^[A-Za-z ]+$",
-                        error: "Only letters and spaces allowed"
-                    },
-                    { 
-                        type: "text", 
-                        name: "Remarks", 
-                        placeholder: "Enter remarks", 
-                        label: "Remarks", 
-                        required: false 
-                    },
-                    { 
-                        type: "date", 
-                        name: "Date", 
-                        label: "Date", 
-                        required: true 
-                    },
-                    { type: "submit", name: "sub" },
-                ],
+            { 
+                type: "text", 
+                name: "PAN_NUMBER", 
+                placeholder: "Enter PAN Number", 
+                label: "PAN Number", 
+                required: true,
+                pattern: "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
+                error: "Invalid PAN format (e.g., ABCDE1234F)"
             },
-        };
+            { 
+                type: "text", 
+                name: "MOBILE_NUMBER", 
+                placeholder: "Enter Mobile Number", 
+                label: "Mobile Number", 
+                required: true,
+                pattern: "^\\d{10}$",
+                error: "Must be 10 digits",
+                inputmode: "numeric",
+                maxlength: 10
+            },
+            { 
+                type: "date", 
+                name: "DOB", 
+                placeholder: "Enter DOB", 
+                label: "Date Of Birth", 
+                required: true 
+            },
+            { 
+                type: "text", 
+                name: "LOCATION", 
+                placeholder: "Enter Location", 
+                label: "Location", 
+                required: true 
+            },
+            {
+                type: "select",
+                name: "LOAN_TYPE",
+                label: "Loan Type",
+                options: [
+                    { value: "", text: "Select Loan Type", disabled: true, selected: true },
+                    { value: "PERSONAL LOAN", text: "PERSONAL LOAN" },
+                    { value: "BUSINESS LOAN", text: "BUSINESS LOAN" },
+                    { value: "HOME LOAN", text: "HOME LOAN" },
+                ],
+                required: true,
+            },
+            { 
+                type: "number", 
+                name: "LOAN_AMOUNT", 
+                placeholder: "Enter Loan Amount", 
+                label: "Loan Amount", 
+                required: true 
+            },
+            { 
+                type: "date", 
+                name: "DATE", 
+                label: "Date", 
+                required: true 
+            },
+			{ 
+                type: "text", 
+                name: "FILED_BY", 
+                placeholder: "Buyer of Files", 
+                label: "Filed By", 
+                required: true,
+                pattern: "^[A-Za-z ]+$",
+                error: "Only letters and spaces allowed"
+            },
+			{ 
+                type: "text", 
+                name: "CONTACT", 
+                placeholder: "Enter Contact Number", 
+                label: "Contact Number", 
+                required: true,
+                pattern: "^\\d{10}$",
+                error: "Must be 10 digits",
+                inputmode: "numeric",
+                maxlength: 10
+            },
+            { type: "submit", name: "sub" },
+        ],
+    },
+    msmeForm: {
+        title: "MSME License Application",
+        formType: "msmeForm",
+        fields: [
+            { 
+                type: "text", 
+                name: "APPLICANT_NAME", 
+                placeholder: "Enter applicant name", 
+                label: "Applicant Name", 
+                required: true,
+                pattern: "^[A-Za-z ]+$",
+                error: "Only letters and spaces allowed"
+            },
+            { 
+                type: "text", 
+                name: "ENTERPRISE", 
+                placeholder: "Enter enterprise name", 
+                label: "Enterprise Name", 
+                required: true 
+            },
+            { 
+                type: "number", 
+                name: "YEARS_OF_BUSINESS", 
+                placeholder: "Enter years of business", 
+                label: "Years of Business", 
+                required: true 
+            },
+            { 
+                type: "text", 
+                name: "AADHAR_NUMBER", 
+                placeholder: "Ex: 1234 5678 9012", 
+                label: "Aadhar Number", 
+                required: true,
+                error: "Must be 12 digits",
+                inputmode: "numeric"
+            },
+            { 
+                type: "text", 
+                name: "PAN_NUMBER", 
+                placeholder: "Enter PAN Number", 
+                label: "PAN Number", 
+                required: true,
+                pattern: "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
+                error: "Invalid PAN format (e.g., ABCDE1234F)"
+            },
+            { 
+                type: "number", 
+                name: "ACCOUNT_NUMBER", 
+                placeholder: "Enter Account Number", 
+                label: "Account Number", 
+                required: true 
+            },
+            { 
+                type: "text", 
+                name: "IFSC_CODE", 
+                placeholder: "Enter IFSC Code", 
+                label: "IFSC Code", 
+                required: true 
+            },
+            { 
+                type: "email", 
+                name: "EMAIL", 
+                placeholder: "Enter Email Address", 
+                label: "Email Address", 
+                required: true 
+            },
+            { 
+                type: "text", 
+                name: "MOBILE_NUMBER_LINKED_WITH_AADHAR", 
+                placeholder: "Enter Mobile Number", 
+                label: "Mobile Number Linked With Aadhar", 
+                required: true,
+                pattern: "^\\d{10}$",
+                error: "Must be 10 digits",
+                inputmode: "numeric",
+                maxlength: 10
+            },
+            { 
+                type: "date", 
+                name: "DATE", 
+                label: "Date", 
+                required: true 
+            },
+			{ 
+                type: "text", 
+                name: "FILED_BY", 
+                placeholder: "Buyer of Files", 
+                label: "Filed By", 
+                required: true,
+                pattern: "^[A-Za-z ]+$",
+                error: "Only letters and spaces allowed"
+            },
+			{ 
+                type: "text", 
+                name: "CONTACT", 
+                placeholder: "Enter Contact Number", 
+                label: "Contact Number", 
+                required: true,
+                pattern: "^\\d{10}$",
+                error: "Must be 10 digits",
+                inputmode: "numeric",
+                maxlength: 10
+            },
+			
+            { type: "submit", name: "sub" },
+        ],
+    },
+    enquiriesForm: {
+        title: "Enquiries Form",
+        formType: "enquiriesForm",
+        fields: [
+            {
+                type: "select",
+                name: "ENQUIRY_TYPE",
+                label: "Enquiry Type",
+                options: [
+                    { value: "", text: "Select an option", disabled: true, selected: true },
+                    { value: "LOAN", text: "LOAN" },
+                    { value: "MSME", text: "MSME" },
+                    { value: "PROPERTY", text: "Property Sale/Buy" },
+                    { value: "LAND SURVEY", text: "LAND SURVEY" },
+                ],
+                required: true,
+            },
+            { 
+                type: "text", 
+                name: "MOBILE_NUMBER", 
+                placeholder: "Enter Mobile Number", 
+                label: "Mobile Number", 
+                required: true,
+                pattern: "^\\d{10}$",
+                error: "Must be 10 digits",
+                inputmode: "numeric",
+                maxlength: 10
+            },
+            { 
+                type: "text", 
+                name: "LOCATION", 
+                placeholder: "Enter Location", 
+                label: "Location", 
+                required: true 
+            },
+            { 
+                type: "text", 
+                name: "OCCUPATION", 
+                placeholder: "Enter Occupation", 
+                label: "Occupation", 
+                required: true 
+            },
+            { 
+                type: "text", 
+                name: "CUSTOMER_NAME", 
+                placeholder: "Enter customer name", 
+                label: "Customer Name", 
+                required: true,
+                pattern: "^[A-Za-z ]+$",
+                error: "Only letters and spaces allowed"
+            },
+            { 
+                type: "text", 
+                name: "REMARKS", 
+                placeholder: "Enter remarks", 
+                label: "Remarks", 
+                required: false 
+            },
+            { 
+                type: "date", 
+                name: "DATE", 
+                label: "Date", 
+                required: true 
+            },
+			{ 
+                type: "text", 
+                name: "FILED_BY", 
+                placeholder: "Buyer of Files", 
+                label: "Filed By", 
+                required: true,
+                pattern: "^[A-Za-z ]+$",
+                error: "Only letters and spaces allowed"
+            },
+			{ 
+                type: "text", 
+                name: "CONTACT", 
+                placeholder: "Enter Contact Number", 
+                label: "Contact Number", 
+                required: true,
+                pattern: "^\\d{10}$",
+                error: "Must be 10 digits",
+                inputmode: "numeric",
+                maxlength: 10
+            },
+            { type: "submit", name: "sub" },
+        ],
+    },
+};
 
         function setDefaultDate() {
             const dateFields = document.querySelectorAll('input[type="date"]');
@@ -448,7 +509,7 @@
                 });
             }
 
-            if (field.name === "Aadhar_Number") {
+            if (field.name === "AADHAR_NUMBER") {
                 input.addEventListener('input', (e) => {
                     let value = e.target.value.replace(/\D/g, '');
                     value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
@@ -462,7 +523,7 @@
         function validateField(input, field, errorMessage) {
             let isValid = true;
             
-            if (field.name === "Aadhar_Number") {
+            if (field.name === "AADHAR_NUMBER") {
                 const rawValue = input.value.replace(/\s/g, '');
                 isValid = /^\d{12}$/.test(rawValue);
             } else if (input.validity.patternMismatch && field.error) {
@@ -556,9 +617,9 @@
                 const scriptURL = 'https://script.google.com/macros/s/AKfycby_arZfJ0CM5KBFIlPBdus7bGnyhc0bmZTmOUwbMEIkWNJDwjFPYnKYA2zzJHxRYD-ynA/exec';
 
                 // Process Aadhar numbers to remove spaces
-                if (formData.has('Aadhar_Number')) {
-                    const aadhar = formData.get('Aadhar_Number').replace(/\s/g, '');
-                    formData.set('Aadhar_Number', aadhar);
+                if (formData.has('AADHAR_NUMBER')) {
+                    const aadhar = formData.get('AADHAR_NUMBER').replace(/\s/g, '');
+                    formData.set('AADHAR_NUMBER', aadhar);
                 }
 
                 // Convert all text values to uppercase
